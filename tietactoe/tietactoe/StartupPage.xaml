@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tietactoe.StartupPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="tietactoe.png" Margin="20,20,20,20"/>
+            <Label Text="Player1" Margin="20,0,0,0"></Label>
+            <Entry x:Name="nameplayer1" Placeholder="Name" Margin="20,0,20,0"></Entry>
+            <Label Text="Player2" Margin="20,0,0,0"></Label>
+            <Entry x:Name="nameplayer2" Placeholder="Name" Margin="20,0,0,0"></Entry>
+            <Button x:Name="playbutton" Clicked="Button_Clicked" Margin="20,0,20,20" Text="Start"/>
+            <Label Text="Highcores" Margin="20,0,0,0" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
+
+            <ListView Margin="20,10,20,0" x:Name="highscorelist" ItemsSource="{Binding Highscores}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="60">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" HorizontalTextAlignment="Start" Text="{Binding Name}"/>
+                                <StackLayout Grid.Column="1">
+                                    <Label Grid.Column="1" HorizontalTextAlignment="End" FontAttributes="Bold" Text="{Binding punten}"/>
+                                    <Label Grid.Column="1" HorizontalTextAlignment="End" FontAttributes="Italic" Text="{Binding datum}"/>
+
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

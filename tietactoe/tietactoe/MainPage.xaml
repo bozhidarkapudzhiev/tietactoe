@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tietactoe.MainPage">
+
+    <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="b00" Grid.Row="0" Grid.Column="0" BackgroundColor="Gray" Clicked="Button_Clicked"></Button>
+            <Button x:Name="b01" Grid.Row="0" Grid.Column="1" BackgroundColor="Gray" Clicked="Button_Clicked"></Button>
+            <Button x:Name="b02" Grid.Row="0" Grid.Column="2" BackgroundColor="Gray" Clicked="Button_Clicked"></Button>
+            <Button x:Name="b10" Grid.Row="1" Grid.Column="0" BackgroundColor="Gray" Clicked="Button_Clicked"></Button>
+            <Button x:Name="b11" Grid.Row="1" Grid.Column="1" BackgroundColor="Gray" Clicked="Button_Clicked"></Button>
+            <Button x:Name="b12" Grid.Row="1" Grid.Column="2" BackgroundColor="Gray" Clicked="Button_Clicked"></Button>
+            <Button x:Name="b20" Grid.Row="2" Grid.Column="0" BackgroundColor="Gray" Clicked="Button_Clicked"></Button>
+            <Button x:Name="b21" Grid.Row="2" Grid.Column="1" BackgroundColor="Gray" Clicked="Button_Clicked"></Button>
+            <Button x:Name="b22" Grid.Row="2" Grid.Column="2" BackgroundColor="Gray" Clicked="Button_Clicked"></Button>
+
+        </Grid>
+      
+    </StackLayout>
+
+</ContentPage>
